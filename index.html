@@ -265,7 +265,7 @@
     border-right:1px solid var(--line-soft);
     overflow:hidden;
   }
-  .frame img{width:100%; height:100%; object-fit:cover; filter:saturate(0.92) contrast(1.03);}
+  .frame img{width:100%; height:100%; object-fit:cover; filter:saturate(0.92) contrast(1.03); cursor:zoom-in;}
   .frame .frame-no{
     position:absolute; top:10px; left:10px;
     font-family:var(--sans); font-size:11px; letter-spacing:0.05em;
@@ -291,7 +291,7 @@
     overflow:hidden;
     border-radius:2px;
   }
-  .about-media img{width:100%; height:100%; object-fit:cover;}
+  .about-media img{width:100%; height:100%; object-fit:cover; cursor:zoom-in;}
   .about-media::after{
     content:''; position:absolute; inset:0;
     border:1px solid var(--line); pointer-events:none;
@@ -331,13 +331,14 @@
     margin-bottom:16px;
     break-inside:avoid;
   }
-  .m-item img{width:100%; height:auto; display:block; transition:transform .5s cubic-bezier(.2,.7,.2,1), filter .5s ease;}
+  .m-item img{width:100%; height:auto; display:block; transition:transform .5s cubic-bezier(.2,.7,.2,1), filter .5s ease; cursor:zoom-in;}
   .m-item:hover img{transform:scale(1.02); filter:saturate(1.08);}
   .m-item .m-overlay{
     position:absolute; inset:0;
     background:linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.88) 100%);
     display:flex; align-items:flex-end; padding:18px;
     opacity:0; transition:opacity .35s ease;
+    pointer-events:none;
   }
   .m-item:hover .m-overlay{opacity:1;}
   .m-overlay .tag{font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--marigold); font-weight:600; display:block; margin-bottom:4px;}
@@ -901,6 +902,9 @@ function buildFilmstrip(){
       <img src="${img.src}" alt="${img.title}" loading="lazy">
     </div>
   `).join('');
+  filmTrack.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
 }
 buildFilmstrip();
 
@@ -942,6 +946,9 @@ function openLightbox(src, alt){
   lightbox.scrollTop = 0;
   lightbox.scrollLeft = 0;
 }
+document.querySelectorAll('.about-media img').forEach(img => {
+  img.addEventListener('click', () => openLightbox(img.src, img.alt));
+});
 lightboxImg.addEventListener('click', () => lightbox.classList.remove('open'));
 document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
 lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
