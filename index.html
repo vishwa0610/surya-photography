@@ -501,11 +501,14 @@
     opacity:0; pointer-events:none; transition:opacity .3s ease;
     padding:40px;
     overflow:auto;
-    text-align:center;
+    display:flex; align-items:center; justify-content:center;
   }
   .lightbox.open{opacity:1; pointer-events:all;}
-  .lightbox::before{content:''; display:inline-block; height:100%; vertical-align:middle; width:0;}
-  .lightbox img{display:inline-block; vertical-align:middle; width:auto; height:auto; max-width:none; max-height:none; object-fit:contain; border:1px solid var(--line); cursor:zoom-out;}
+  .lightbox img{width:auto; height:auto; max-width:calc(100vw - 80px); max-height:calc(100vh - 80px); object-fit:contain; border:1px solid var(--line); cursor:zoom-out;}
+  @media (max-width:640px){
+    .lightbox{padding:16px;}
+    .lightbox img{max-width:calc(100vw - 32px); max-height:calc(100vh - 32px);}
+  }
   .lightbox-close{
     position:absolute; top:28px; right:32px;
     width:44px; height:44px; border:1px solid var(--line); border-radius:50%;
