@@ -169,6 +169,15 @@
     margin:0 auto;
     display:flex; flex-direction:column; gap:18px;
   }
+  .hero-brand{
+    font-family:var(--serif);
+    font-size:clamp(18px, 2vw, 24px);
+    letter-spacing:0.03em;
+    color:var(--ivory);
+    display:flex; align-items:baseline; gap:8px;
+    opacity:0; animation: fadeUp 0.8s ease 0.55s forwards;
+  }
+  .hero-brand .dot{color:var(--marigold);}
   .hero-eyebrow{
     display:flex; align-items:center; gap:12px;
     color:var(--marigold);
@@ -542,6 +551,7 @@
 <section class="hero" id="top">
   <div class="hero-media"></div>
   <div class="hero-inner">
+    <div class="hero-brand">Surya<span class="dot">·</span>Photography</div>
     <div class="hero-eyebrow"><span class="rule"></span>Wedding &amp; Event Photography · Tamil Nadu</div>
     <h1>Two souls, <em>one</em> frame.</h1>
     <div class="hero-sub">
