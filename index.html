@@ -220,6 +220,10 @@
   .scroll-cue .line{width:1px; height:42px; background:linear-gradient(var(--marigold), transparent); animation: scrollLine 2s ease-in-out infinite;}
   @keyframes scrollLine{ 0%,100%{opacity:0.3;} 50%{opacity:1;} }
   @media (max-width:640px){ .scroll-cue{display:none;} }
+  @media (max-width:640px){
+    .hero-brand{display:none;}
+    .hero-eyebrow{flex-direction:column; align-items:flex-start; gap:8px;}
+  }
 
   /* ---------- Section shells ---------- */
   section{position:relative; padding:120px 0;}
@@ -383,8 +387,7 @@
   .p-step h3{font-size:22px; color:var(--ivory); margin-bottom:8px;}
   .p-step p{color:var(--ivory-dim); font-size:14.5px; line-height:1.7;}
   @media (max-width:700px){
-    .p-step{grid-template-columns:50px 1fr; }
-    .p-step > div:last-child{grid-column:2 / 3;}
+    .p-step{display:flex; flex-direction:column; gap:10px;}
   }
 
   /* ---------- Testimonials ---------- */
