@@ -390,33 +390,6 @@
     .p-step{display:flex; flex-direction:column; gap:10px;}
   }
 
-  /* ---------- Testimonials ---------- */
-  .testimonials{
-    background:var(--ink-soft);
-    border-top:1px solid var(--line-soft);
-    border-bottom:1px solid var(--line-soft);
-  }
-  .t-track{display:flex; gap:1px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px;}
-  .t-track::-webkit-scrollbar{height:4px;}
-  .t-track::-webkit-scrollbar-thumb{background:var(--marigold);}
-  .t-card{
-    min-width:340px; scroll-snap-align:start;
-    background:var(--ink); border:1px solid var(--line-soft);
-    padding:32px; flex-shrink:0;
-  }
-  .t-card .quote-mark{font-family:var(--serif); font-size:48px; color:var(--marigold); line-height:0.5; display:block; margin-bottom:10px;}
-  .t-card p{color:var(--ivory-dim); font-size:15px; line-height:1.7; margin-bottom:24px;}
-  .t-who{display:flex; align-items:center; gap:12px;}
-  .t-who img{width:44px; height:44px; border-radius:50%; object-fit:cover;}
-  .t-avatar{
-    width:44px; height:44px; border-radius:50%; flex-shrink:0;
-    background:var(--ink-soft); border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    font-family:var(--serif); font-size:14px; color:var(--marigold);
-  }
-  .t-who .name{font-size:14px; color:var(--ivory); font-weight:500;}
-  .t-who .event{font-size:12px; color:var(--ivory-dim);}
-
   /* ---------- CTA / Booking ---------- */
   .cta-section{
     position:relative;
@@ -702,47 +675,6 @@
     </div>
   </div>
 </section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="testimonials">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">From past clients</span>
-        <h2 style="margin-top:14px;">What couples say</h2>
-      </div>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="t-track reveal">
-      <div class="t-card">
-        <span class="quote-mark">"</span>
-        <p>Surya blended into the background the entire day, but somehow caught every moment we'd have wanted a photo of. The gallery felt like our actual wedding, not a staged version of it.</p>
-        <div class="t-who">
-          <div class="t-avatar">PK</div>
-          <div><span class="name">Priya &amp; Karthik</span><span class="event">Wedding, Coimbatore</span></div>
-        </div>
-      </div>
-      <div class="t-card">
-        <span class="quote-mark">"</span>
-        <p>The full gallery arrived right on time, exactly a month later, and every photo felt warm, not over-processed.</p>
-        <div class="t-who">
-          <div class="t-avatar">DR</div>
-          <div><span class="name">Divya R.</span><span class="event">Engagement, Madurai</span></div>
-        </div>
-      </div>
-      <div class="t-card">
-        <span class="quote-mark">"</span>
-        <p>Booked the multi-day package for our three-function wedding. Having the same two photographers across all three days meant zero re-explaining what mattered to us.</p>
-        <div class="t-who">
-          <div class="t-avatar">AM</div>
-          <div><span class="name">Aravind &amp; Meena</span><span class="event">3-day wedding, Trichy</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CTA ============ -->
 <section class="cta-section">
   <div class="wrap">
